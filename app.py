@@ -14,7 +14,7 @@ def load_model():
 model = load_model()
 
 # Camera
-cap = cv2.VideoCapture("http://ESP32_IP:81/stream")
+cap = cv2.VideoCapture(0)
 
 col1, col2 = st.columns([2,1])
 
@@ -87,5 +87,6 @@ if run:
         level_box.metric("🚦 Crowd Level", level)
 
         time.sleep(0.1)
+
 
 cap.release()
